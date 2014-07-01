@@ -1,0 +1,16 @@
+.well
+  p 이미지가 올것이다.
+  p 이미지가 올것이다.
+  p 이미지가 올것이다.
+  p 이미지가 올것이다.
+  p 이미지가 올것이다.
+h1.page-header
+  | 이벤트
+.container
+  form(ng-submit="submit()")
+    .form-group
+      input.form-control.input-lg(type="text" placeholder="할 일을 입력하세요" ng-required="true" data-ng-model="todo" autofocus)
+    .form-group
+      input.form-control.input-lg(type="email" placeholder="이메일 주소를 입력하세요" ng-required="true" data-ng-model="email")
+    .form-group
+      button.btn.btn-lg.btn-default.btn-block(type="submit" ng-bind="btnName")
