@@ -1,0 +1,99 @@
+@import "long-shadow.less";
+
+@theme-yellow: rgb(255, 212, 100);
+@theme-red: rgb(242, 105, 99);
+@theme-blue: rgb(18, 83, 163);
+@theme-white: rgb(244, 244, 242);
+
+
+body {
+  background-color: @theme-yellow;
+}
+
+// button
+// -------
+.btn-theme-red {
+  background-color: transparent;
+  border: solid 1px @theme-red;
+  color: @theme-red;
+}
+.btn-theme-red:hover,
+.btn-theme-red:focus {
+  background-color: @theme-red;
+  color: @theme-white
+}
+
+// section
+// --------
+.section {
+  padding: 15px 0;
+  font-size: 18px;
+}
+.section-theme-blue {
+  background-color: @theme-blue;
+}
+.section-theme-red {
+  background-color: @theme-red;
+}
+.section-theme-yellow {
+  background-color: @theme-yellow;
+}
+
+// text
+// -----
+.text-theme-red {
+  color: darken(@theme-red, 15%);
+}
+.text-theme-blue {
+  color: darken(@theme-blue, 15%);
+}
+.text-theme-yellow {
+  color: darken(@theme-yellow, 15%);
+}
+.text-theme-white {
+  color: @theme-white;
+}
+
+
+// label
+// ---------
+.label-theme-yellow {
+  background-color: @theme-yellow;
+}
+.label-theme-red {
+  background-color: darken(@theme-red, 15%);
+}
+.label-theme-blue {
+  background-color: darken(@theme-blue, 15%);
+}
+
+// text-shadow
+// ------------
+.text-shadow-red {
+  overflow: hidden;
+  .longShadow(darken(@theme-red, 15%), 50, 100);
+}
+.text-shadow-white {
+  overflow: hidden;
+  .longShadow(@theme-white, 50, 100);
+}
+
+.title {
+  background-color: @theme-red;
+  margin-bottom: 20px;
+  padding-top: 200px;
+}
+.text-title {
+  font-size: 40px;
+  padding-bottom: 10px;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.line-height-md {
+  line-height: 1.5em;
+}
+
+.container {
+  max-width: 500px;
+}

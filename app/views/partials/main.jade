@@ -1,16 +1,17 @@
-.well
-  p 이미지가 올것이다.
-  p 이미지가 올것이다.
-  p 이미지가 올것이다.
-  p 이미지가 올것이다.
-  p 이미지가 올것이다.
-h1.page-header
-  | 이벤트
+.title
+  .container
+    h1.text-theme-white.text-shadow-red.text-title
+      | 이벤트 응모
+
 .container
+  .section.section-theme-yellow 당신의 할일을 입력해 보세요. 저희가 기억해 두겠습니다. 그리고 언젠가 다시 전화할께요.
   form(ng-submit="submit()")
     .form-group
       input.form-control.input-lg(type="text" placeholder="할 일을 입력하세요" ng-required="true" data-ng-model="todo" autofocus)
     .form-group
       input.form-control.input-lg(type="email" placeholder="이메일 주소를 입력하세요" ng-required="true" data-ng-model="email")
     .form-group
-      button.btn.btn-lg.btn-default.btn-block(type="submit" ng-bind="btnName")
+      button.btn.btn-lg.btn-theme-red.btn-block(type="submit" ng-bind="btnName")
+
+  .section.section-theme-yellow(ng-if="msg" ng-bind-html="msg")
+
